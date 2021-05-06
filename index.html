@@ -38,7 +38,7 @@
                 >
                     {{ element.todo}}    
 
-                    <i class="fas fa-times" @click.stop="removeTodo(index)"></i>
+                    <i v-if = "element.checked" class="fas fa-times" @click.stop="removeTodo(index)"></i>
                 </li>
             </ul>
         </div>
