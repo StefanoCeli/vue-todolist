@@ -5,18 +5,60 @@
 }
 .logo{
     text-align: center;
+    margin-top: 30px;
+}
+.add-todo{
+    text-align: center;
+    position: relative;
+}
+.add-todo h4{
+    font-size: 25px;
+    color: red;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+.add-todo input,.add-todo button{
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    margin-right: 20px;
+}
+.add-todo input{
+    width: 300px;
     margin-top: 50px;
+}
+.add-todo button{
+    cursor: pointer;
+}
+.add-todo button:hover{
+    color: gray;
+    background-color:snow;
 }
 .logo img{
     width: 250px;
+}
+.list-todo{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: lightgray;
+    border-radius: 25px;
+    margin-top: 50px;
 }
 .list-todo ul{
     list-style: none;
 }
 .list-todo li{
     cursor: pointer;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+}
+.list-todo li i{
+    float:right;
 }
 .checked{
-    color: lightgray;
+    color: gray;
     text-decoration: line-through;
 }

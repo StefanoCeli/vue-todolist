@@ -17,16 +17,16 @@
             <img :src="logo" alt="">
         </div>
 
-       <div class="add-todo">
-            <h4 v-if = "alertAttivo" >Inserisci un testo più lungo! </h4>
-            <input 
-            v-model = "addStrTodo" 
-            type = "text" 
-            placeholder = "Nuovo Todo"
-            @keyup.enter = "addTodo"
-            >
-            <button @click = "addTodo" >Aggiungi</button>
-       </div>
+        <div class="add-todo">
+                <h4 v-if = "alertAttivo" >Inserisci un testo più lungo! </h4>
+                <input 
+                v-model = "addStrTodo" 
+                type = "text" 
+                placeholder = "Nuovo Todo"
+                @keyup.enter = "addTodo"
+                >
+                <button @click = "addTodo" >Aggiungi</button>
+        </div>
 
         <div class="list-todo">
         
@@ -34,6 +34,7 @@
                 <li 
                 v-for=" ( element,index ) in toDos"
                 :class = " element.checked ? 'checked' :null "
+                :style = " index === toDos.length -1  ? 'border:0' : null"
                 @click = " element.checked = !element.checked "
                 >
                     {{ element.todo}}    
