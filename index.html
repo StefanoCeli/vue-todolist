@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <div class="logo">
+            <img :src="logo" alt="">
+        </div>
+
+       <div class="add-todo">
+            <h4 v-if = "alertAttivo" >Inserisci un testo più lungo! </h4>
+            <input 
+            v-model = "addStrTodo" 
+            type = "text" 
+            placeholder = "Nuovo Todo"
+            @keyup.enter = "addTodo"
+            >
+            <button @click = "addTodo" >Aggiungi</button>
+       </div>
+
+        <div class="list-todo">
+        
+            <ul>
+                <li 
+                v-for=" ( element,index ) in toDos"
+                :class = " element.checked ? 'checked' :null "
+                @click = " element.checked = !element.checked "
+                >
+                    {{ element.todo}}    
+
+                    <i class="fas fa-times" @click.stop="removeTodo(index)"></i>
+                </li>
+            </ul>
+        </div>
+       
+
+    </div>
+   
+
+    
+    <script src="assets/js/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    text-align: center;
+    margin-top: 50px;
+}
+.logo img{
+    width: 250px;
+}
+.list-todo ul{
+    list-style: none;
+}
+.list-todo li{
+    cursor: pointer;
+}
+.checked{
+    color: lightgray;
+    text-decoration: line-through;
+}
